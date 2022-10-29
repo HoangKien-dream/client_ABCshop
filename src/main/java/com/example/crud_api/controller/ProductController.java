@@ -20,7 +20,7 @@ public class ProductController {
     public Product create(@RequestBody Product product){
         return  productServiceImplement.addProduct(product);
     }
-    @RequestMapping(path = "sell",method = RequestMethod.GET)
+    @RequestMapping(path = "sell",method = RequestMethod.POST)
     public boolean sellProduct(@RequestParam int id,@RequestParam int quantity){
         return productServiceImplement.sellProduct(id,quantity);
     }
